@@ -26,36 +26,73 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Photo Learn'),
-        ),
+        // appBar: AppBar(
+        //   title: Text('Welcome to Photo Learn'),
+        // ),
         body: Center(
             child: Column(
-          children: [
-            Text(
-              'Photo Learn',
-              style: TextStyle(
-                fontSize: 60,
-                color: Color.fromARGB(255, 92, 105, 152),
-              ),
-            ),
-            Image(
-              image: NetworkImage(
-                  'https://png.pngtree.com/element_our/20190601/ourmid/pngtree-buffalo-hand-painted-realistic-buffalo-cattle-bull-image_1341724.jpg'),
-            ),
-            RaisedButton.icon(
-              onPressed: () {},
-              icon: Icon(Icons.navigate_next),
-              label: Text('Start'),
-              color: Colors.blueAccent,
-            ),
-            RaisedButton.icon(
-              onPressed: () {},
-              icon: Icon(Icons.auto_stories),
-              label: Text('How to use'),
-              color: Colors.blueAccent,
-            ),
-          ],
-        )));
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Text(
+          'photo learn',
+          style: TextStyle(
+            fontSize: 60,
+            color: Color.fromARGB(255, 0, 0, 0),
+            fontWeight: FontWeight.bold,
+            //fontStyle: FontStyle.normal,
+            fontFamily: 'Rajdhani',
+          ),
+        ),
+        // Image(
+        //   image: NetworkImage(
+        //       'https://png.pngtree.com/element_our/20190601/ourmid/pngtree-buffalo-hand-painted-realistic-buffalo-cattle-bull-image_1341724.jpg'),
+        // ),
+        ShowButton(),
+        // RaisedButton.icon(
+        //   onPressed: () {},
+        //   icon: Icon(Icons.navigate_next),
+        //   label: Text('Start').,
+        //   color: Color.fromARGB(255, 57, 57, 57),
+        // ),
+        // RaisedButton.icon(
+        //   onPressed: () {},
+        //   icon: Icon(Icons.auto_stories),
+        //   label: Text('How to use'),
+        //   color: Color.fromARGB(255, 215, 215, 215),
+        // ),
+      ],
+    )));
+  }
+
+  Widget StartButton() {
+    return RaisedButton(
+      color: Color.fromARGB(255, 0, 0, 0),
+      child: Text(
+        'Start',
+        style: TextStyle(color: Colors.white),
+      ),
+      onPressed: () {},
+    );
+  }
+
+  Widget HowtoButton() {
+    return RaisedButton(
+      color: Color.fromARGB(255, 255, 255, 255),
+      child: Text('How to use'),
+      onPressed: () {},
+    );
+  }
+
+  Widget ShowButton() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        HowtoButton(),
+        SizedBox(
+          width: 10.0,
+        ),
+        StartButton(),
+      ],
+    );
   }
 }
