@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:project_photo_learn/Howto/howtouse.dart';
 
 void main() => runApp(MyApp());
 
@@ -63,23 +64,33 @@ class _MyHomePageState extends State<MyHomePage> {
       ],
     );
   }
-}
 
-Widget StartButton() {
-  return RaisedButton(
-    color: Color.fromARGB(255, 0, 0, 0),
-    child: Text(
-      'Start',
-      style: TextStyle(color: Colors.white),
-    ),
-    onPressed: () {},
-  );
-}
+  Widget StartButton() {
+    return RaisedButton(
+      color: Color.fromARGB(255, 0, 0, 0),
+      child: Text(
+        'Start',
+        style: TextStyle(color: Colors.white),
+      ),
+      onPressed: () {
+        // MaterialPageRoute materialPageRoute =
+        //     MaterialPageRoute(builder: (BuildContext context) => HowToUse());
+        // Navigator.of(this.context).push(materialPageRoute);
+      },
+    );
+  }
 
-Widget HowtoButton() {
-  return RaisedButton(
-    color: Color.fromARGB(255, 255, 255, 255),
-    child: Text('How to use'),
-    onPressed: () {},
-  );
+  Widget HowtoButton() {
+    return RaisedButton(
+      color: Color.fromARGB(255, 255, 255, 255),
+      child: Text('How to use'),
+      onPressed: () {
+        print('fuckkkkkkkkkkkkkkkkkkkk');
+
+        MaterialPageRoute materialPageRoute =
+            MaterialPageRoute(builder: (BuildContext context) => HowToUse());
+        Navigator.of(this.context).push(materialPageRoute);
+      },
+    );
+  }
 }
