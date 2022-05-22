@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:project_photo_learn/Howto/howtouse.dart';
+import 'package:project_photo_learn/Start/start.dart';
+import 'package:project_photo_learn/my_style.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,13 +28,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // appBar: AppBar(
-        //   title: Text('Welcome to Photo Learn'),
-        // ),
         body: Center(
             child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        MyStyle().showLogo(),
         Text(
           'photo learn',
           style: TextStyle(
@@ -73,9 +73,9 @@ class _MyHomePageState extends State<MyHomePage> {
         style: TextStyle(color: Colors.white),
       ),
       onPressed: () {
-        // MaterialPageRoute materialPageRoute =
-        //     MaterialPageRoute(builder: (BuildContext context) => HowToUse());
-        // Navigator.of(this.context).push(materialPageRoute);
+        MaterialPageRoute materialPageRoute = MaterialPageRoute(
+            builder: (BuildContext context) => Start_Register());
+        Navigator.of(this.context).push(materialPageRoute);
       },
     );
   }
@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
       color: Color.fromARGB(255, 255, 255, 255),
       child: Text('How to use'),
       onPressed: () {
-        print('fuckkkkkkkkkkkkkkkkkkkk');
+        //print('fuckkkkkkkkkkkkkkkkkkkk');
 
         MaterialPageRoute materialPageRoute =
             MaterialPageRoute(builder: (BuildContext context) => HowToUse());
