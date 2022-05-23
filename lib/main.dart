@@ -70,7 +70,10 @@ class _MyHomePageState extends State<MyHomePage> {
       color: Color.fromARGB(255, 0, 0, 0),
       child: Text(
         'Start',
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+        ),
       ),
       onPressed: () {
         MaterialPageRoute materialPageRoute = MaterialPageRoute(
@@ -83,7 +86,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget HowtoButton() {
     return RaisedButton(
       color: Color.fromARGB(255, 255, 255, 255),
-      child: Text('How to use'),
+      child: Text(
+        'How to use',
+        style: TextStyle(
+          fontSize: 20,
+        ),
+      ),
       onPressed: () {
         //print('fuckkkkkkkkkkkkkkkkkkkk');
 

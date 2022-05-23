@@ -17,6 +17,16 @@ class _StartRegisterState extends State<Start_Register> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+          Text(
+            'Create your name',
+            style: TextStyle(
+              fontSize: 50,
+              color: Color.fromARGB(255, 0, 0, 0),
+              fontWeight: FontWeight.bold,
+              //fontStyle: FontStyle.normal,
+              fontFamily: 'Rajdhani',
+            ),
+          ),
           NameUser(),
           NextToHome(),
         ],
