@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:project_photo_learn/Howto/howtouse.dart';
+import 'package:project_photo_learn/Howto/sumlong.dart';
 import 'package:project_photo_learn/Start/start.dart';
 import 'package:project_photo_learn/my_style.dart';
 
@@ -11,9 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //title: 'Welcome to Flutter',
       home: MyHomePage(),
-      //theme: ThemeData(primarySwatch: Colors.indigo),
     );
   }
 }
@@ -96,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
         //print('fuckkkkkkkkkkkkkkkkkkkk');
 
         MaterialPageRoute materialPageRoute =
-            MaterialPageRoute(builder: (BuildContext context) => HowToUse());
+            MaterialPageRoute(builder: (BuildContext context) => HowToUse2());
         Navigator.of(this.context).push(materialPageRoute);
       },
     );

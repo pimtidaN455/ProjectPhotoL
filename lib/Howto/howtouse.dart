@@ -11,7 +11,7 @@ class HowToUse extends StatelessWidget {
           children: [
             SingleChildScrollView(
               child: Text(
-                'Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name Create your name ',
+                'How to use\nHello World',
                 style: TextStyle(
                   fontSize: 50,
                   color: Color.fromARGB(255, 0, 0, 0),
