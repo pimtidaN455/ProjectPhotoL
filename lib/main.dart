@@ -3,7 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:project_photo_learn/Howto/howtouse.dart';
 import 'package:project_photo_learn/Howto/sumlong.dart';
-import 'package:project_photo_learn/Start/start.dart';
+import 'package:project_photo_learn/Start/start_register.dart';
+import 'package:project_photo_learn/Start/start_login.dart';
 import 'package:project_photo_learn/my_style.dart';
 
 void main() => runApp(MyApp());
@@ -27,33 +28,77 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-            child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        MyStyle().showLogo(),
-        Text(
-          'photo learn',
-          style: TextStyle(
-            fontSize: 60,
-            color: Color.fromARGB(255, 0, 0, 0),
-            fontWeight: FontWeight.bold,
-            //fontStyle: FontStyle.normal,
-            fontFamily: 'Rajdhani',
-          ),
+        body: SafeArea(
+            child: GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          color: Color.fromARGB(255, 255, 255, 255),
         ),
-        // Image(
-        //   image: NetworkImage(
-        //       'https://png.pngtree.com/element_our/20190601/ourmid/pngtree-buffalo-hand-painted-realistic-buffalo-cattle-bull-image_1341724.jpg'),
-        // ),
-        ShowButton(),
-      ],
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 100, 0, 200),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                    child: Image.asset(
+                      'images/logo2.png',
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Text(
+                    'PHOTO\nLEARN',
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 0, 0, 0),
+                      fontSize: 35,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                          child: ShowButton(),
+                        ),
+                      ],
+                    ),
+                  ),
+                ])
+          ],
+        ),
+      ),
     )));
   }
 
   Widget ShowButton() {
     return Row(
+      mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: <Widget>[
         HowtoButton(),
         SizedBox(
@@ -66,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget StartButton() {
     return RaisedButton(
-      color: Color.fromARGB(255, 0, 0, 0),
+      color: Color(0xFF4B39EF),
       child: Text(
         'Start',
         style: TextStyle(
@@ -75,8 +120,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       onPressed: () {
-        MaterialPageRoute materialPageRoute = MaterialPageRoute(
-            builder: (BuildContext context) => Start_Register());
+        MaterialPageRoute materialPageRoute =
+            MaterialPageRoute(builder: (BuildContext context) => Startlogin());
         Navigator.of(this.context).push(materialPageRoute);
       },
     );

@@ -51,7 +51,7 @@ class _HowtoWidgetState extends State<HowToUse2> {
                   },
                   child: ListTile(
                     title: Text(
-                      '1. Add subject',
+                      '1. Add Album',
                       style: TextStyle(
                         fontSize: 20,
                         color: Color.fromARGB(255, 0, 0, 0),
