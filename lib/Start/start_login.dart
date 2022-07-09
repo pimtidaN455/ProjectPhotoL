@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_photo_learn/my_style.dart';
 import 'package:project_photo_learn/Start/start_register.dart';
+import 'package:project_photo_learn/main.dart';
 
 class Startlogin extends StatefulWidget {
   const Startlogin({Key? key}) : super(key: key);
@@ -14,28 +15,38 @@ class _StartloginState extends State<Startlogin> {
   Widget build(BuildContext context) {
     screen = MediaQuery.of(context).size.width;
     return Scaffold(
-        body: Align(
-      alignment: Alignment.center,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            'Login',
-            style: TextStyle(
-              fontSize: 50,
-              color: Color.fromARGB(255, 0, 0, 0),
-              fontWeight: FontWeight.bold,
-              //fontStyle: FontStyle.normal,
-              fontFamily: 'Rajdhani',
-            ),
+        appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios_new),
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => MyApp()));
+            },
           ),
-          Emaill(),
-          Passwordd(),
-          NextToHome(),
-          Regis1(),
-        ],
-      ),
-    ));
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        ),
+        body: Align(
+          alignment: Alignment.center,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'Login',
+                style: TextStyle(
+                  fontSize: 50,
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  fontWeight: FontWeight.bold,
+                  //fontStyle: FontStyle.normal,
+                  fontFamily: 'Rajdhani',
+                ),
+              ),
+              Emaill(),
+              Passwordd(),
+              NextToHome(),
+              Regis1(),
+            ],
+          ),
+        ));
   }
 
   Container Emaill() {
@@ -45,7 +56,7 @@ class _StartloginState extends State<Startlogin> {
       child: TextFormField(
         decoration: InputDecoration(
             hintText: 'E-mail',
-            prefixIcon: Icon(Icons.perm_identity),
+            prefixIcon: Icon(Icons.email_outlined),
             enabledBorder:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
             focusedBorder:
@@ -61,7 +72,7 @@ class _StartloginState extends State<Startlogin> {
       child: TextFormField(
         decoration: InputDecoration(
             hintText: 'Password',
-            prefixIcon: Icon(Icons.perm_identity),
+            prefixIcon: Icon(Icons.password),
             enabledBorder:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
             focusedBorder:

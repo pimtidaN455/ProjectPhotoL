@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_photo_learn/my_style.dart';
+import 'package:project_photo_learn/main.dart';
+import 'package:project_photo_learn/Start/start_login.dart';
 
 class Start_Register extends StatefulWidget {
   const Start_Register({Key? key}) : super(key: key);
@@ -13,29 +15,39 @@ class _StartRegisterState extends State<Start_Register> {
   Widget build(BuildContext context) {
     screen = MediaQuery.of(context).size.width;
     return Scaffold(
-        body: Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            'Create Account',
-            style: TextStyle(
-              fontSize: 50,
-              color: Color.fromARGB(255, 0, 0, 0),
-              fontWeight: FontWeight.bold,
-              //fontStyle: FontStyle.normal,
-              fontFamily: 'Rajdhani',
-            ),
+        appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios_new),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Startlogin()));
+            },
           ),
-          FirstName(),
-          LastName(),
-          Emailre(),
-          PassWordre(),
-          conFP(),
-          NextToHome(),
-        ],
-      ),
-    ));
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'Create Account',
+                style: TextStyle(
+                  fontSize: 50,
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  fontWeight: FontWeight.bold,
+                  //fontStyle: FontStyle.normal,
+                  fontFamily: 'Rajdhani',
+                ),
+              ),
+              FirstName(),
+              LastName(),
+              Emailre(),
+              PassWordre(),
+              conFP(),
+              NextToHome(),
+            ],
+          ),
+        ));
   }
 
   Container NextToHome() {

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_photo_learn/Howto/HowtoList/howto1.dart';
+import 'package:project_photo_learn/Howto/howtouse.dart';
+import 'package:project_photo_learn/main.dart';
 
 class HowToUse2 extends StatefulWidget {
   const HowToUse2({Key? key}) : super(key: key);
@@ -16,6 +18,13 @@ class _HowtoWidgetState extends State<HowToUse2> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios_new),
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => MyApp()));
+          },
+        ),
         backgroundColor: Color.fromARGB(255, 0, 0, 0),
         automaticallyImplyLeading: false,
         title: Text(
