@@ -12,6 +12,7 @@ class Start_Register extends StatefulWidget {
 class _StartRegisterState extends State<Start_Register> {
   late double screen;
   @override
+  bool _isObscure = true;
   Widget build(BuildContext context) {
     screen = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -118,9 +119,18 @@ class _StartRegisterState extends State<Start_Register> {
       margin: EdgeInsets.only(top: 16),
       width: screen * 0.8,
       child: TextFormField(
+        obscureText: _isObscure,
         decoration: InputDecoration(
-            hintText: 'Password',
+            labelText: 'Password',
             prefixIcon: Icon(Icons.password),
+            suffixIcon: IconButton(
+                icon:
+                    Icon(_isObscure ? Icons.visibility : Icons.visibility_off),
+                onPressed: () {
+                  setState(() {
+                    _isObscure = !_isObscure;
+                  });
+                }),
             enabledBorder:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
             focusedBorder:
@@ -134,9 +144,18 @@ class _StartRegisterState extends State<Start_Register> {
       margin: EdgeInsets.only(top: 16),
       width: screen * 0.8,
       child: TextFormField(
+        obscureText: _isObscure,
         decoration: InputDecoration(
-            hintText: 'Confirm password',
+            labelText: 'Confirm password',
             prefixIcon: Icon(Icons.password),
+            suffixIcon: IconButton(
+                icon:
+                    Icon(_isObscure ? Icons.visibility : Icons.visibility_off),
+                onPressed: () {
+                  setState(() {
+                    _isObscure = !_isObscure;
+                  });
+                }),
             enabledBorder:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
             focusedBorder:

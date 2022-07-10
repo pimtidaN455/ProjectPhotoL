@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   Text(
-                    'PHOTO\nLEARN',
+                    'PHOTO\nLEARNN',
                     textAlign: TextAlign.start,
                     style: TextStyle(
                       color: Color.fromARGB(255, 0, 0, 0),
